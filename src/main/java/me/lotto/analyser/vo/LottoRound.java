@@ -13,16 +13,13 @@ import javax.persistence.Id;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
-public class LottoNumber {
+@Getter @Setter
+public class LottoRound {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
-    private int number;
     private int round;
-    private int appearCount;
+    private String syncYn;
 
 }
