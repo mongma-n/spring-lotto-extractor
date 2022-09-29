@@ -4,7 +4,15 @@ import lombok.extern.slf4j.Slf4j;
 import me.lotto.analyser.repository.LottoRepository;
 import me.lotto.analyser.repository.LottoRoundRepository;
 import me.lotto.analyser.vo.LottoRound;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.stereotype.Service;
+
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Slf4j
 @Service
@@ -56,6 +64,51 @@ public class LottoServiceImpl implements LottoService {
 
     @Override
     public int extractNumber() {
+//        for (int i = 0; i < 5; i++) {
+//            Set<Integer> randomSet = new HashSet<>();
+//            getFixedThreeNumberAndRemove(randomSet);
+//            while (true) {
+//                randomSet.add(getOtherNum());
+//                if (randomSet.size() == 6) break;
+//            }
+//            System.out.println(randomSet);
+//        }
+
+//        List<Integer> randoms = new ArrayList<>();
+//        randoms.add(21);
+//        randoms.add(31);
+//        randoms.add(45);
+//        randoms.add(25);
+//        randoms.add(5);
+//        randoms.add(30);
+//        randoms.add(29);
+//        randoms.add(41);
+//        randoms.add(23);
+//        return randoms.get(random.nextInt(randoms.size()));
+
+
+
+//        String response = null;
+//        LotResult lotResult = null;
+//        Gson gson = new Gson();
+//        Set<Integer> removeNums = new HashSet<>();
+//
+//        for (int i = 0; i < 3; i++) {
+//            response = IOUtils.toString(new URL("https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=" + (round - i)), StandardCharsets.UTF_8);
+//            lotResult = gson.fromJson(response, LotResult.class);
+//            removeNums.add(lotResult.getDrwtNo1());
+//            removeNums.add(lotResult.getDrwtNo2());
+//            removeNums.add(lotResult.getDrwtNo3());
+//            removeNums.add(lotResult.getDrwtNo4());
+//            removeNums.add(lotResult.getDrwtNo5());
+//            removeNums.add(lotResult.getDrwtNo6());
+//            removeNums.add(lotResult.getBnusNo());
+//        }
+//        System.out.println("Remove Numbers :: " + removeNums);
+//
+//        for (int i : removeNums) {
+//            target.remove(Integer.valueOf(i));
+//        }
         return 0;
     }
 }
